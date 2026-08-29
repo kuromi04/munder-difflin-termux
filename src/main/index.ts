@@ -93,6 +93,13 @@ import {
 
 const isDev = !!process.env.ELECTRON_RENDERER_URL;
 
+app.commandLine.appendSwitch('ignore-gpu-blocklist');
+app.commandLine.appendSwitch('use-gl', 'angle');
+app.commandLine.appendSwitch('use-angle', 'swiftshader');
+app.commandLine.appendSwitch('enable-webgl');
+app.commandLine.appendSwitch('enable-unsafe-swiftshader');
+app.commandLine.appendSwitch('disable-gpu-sandbox');
+
 // Keep the main process alive on an unexpected throw/rejection. The harness is a
 // multi-agent supervisor — a single stray throw (e.g. node-pty's ConPTY console
 // helper choking when a fast-exiting agent CLI's console is already gone) must
@@ -2063,8 +2070,8 @@ function stopWebhookServer(): void {
 /** The persisted main-window geometry (kv key `window.bounds`). */
 interface WindowBounds { x?: number; y?: number; width: number; height: number }
 
-const DEFAULT_WIN = { width: 1440, height: 900 };
-const MIN_WIN = { width: 1280, height: 800 };
+const DEFAULT_WIN = { width: 1024, height: 768 };
+const MIN_WIN = { width: 600, height: 400 };
 
 /** Validate + clamp restored bounds: enforce the minimum size, and drop a
  *  position that no longer lands on any connected display (monitor unplugged) so
@@ -2073,8 +2080,8 @@ function clampBounds(b: unknown): WindowBounds | null {
   if (!b || typeof b !== 'object') return null;
   const r = b as Partial<WindowBounds>;
   if (typeof r.width !== 'number' || typeof r.height !== 'number') return null;
-  const width = Math.max(MIN_WIN.width, Math.round(r.width));
-  const height = Math.max(MIN_WIN.height, Math.round(r.height));
+  const width = Math.min(DEFAULT_WIN.width, Math.max(MIN_WIN.width, Math.round(r.width)));
+  const height = Math.min(DEFAULT_WIN.height, Math.max(MIN_WIN.height, Math.round(r.height)));
   if (typeof r.x !== 'number' || typeof r.y !== 'number') return { width, height };
   const x = Math.round(r.x), y = Math.round(r.y);
   // Keep the position only if the window rect overlaps some display's work area.

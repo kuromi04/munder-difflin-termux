@@ -2,9 +2,9 @@
 
 <img src="./docs/logo.png" alt="Munder Difflin — agent harness to run an office of your clones" width="180">
 
-# Munder Difflin
+# Munder Difflin (Termux / Android Edition) 📱🤖
 
-### Agent harness to run an office of your clones
+### Multi-Agent 2D Virtual Office Orchestration adapted for Termux:X11
 
 <p>
   <a href="https://trendshift.io/repositories/46562" target="_blank" rel="noopener noreferrer"><img alt="GitHub Trending — #1 Repository of the Day" src="./docs/badge-github-trending.png" width="250" height="54"></a>
@@ -13,37 +13,18 @@
 
 <img src="./docs/media/floor.png" alt="The Munder Difflin office floor: agents at desks working in parallel, with the Command Center and a live agent terminal on the right" width="1240">
 
-**Free, open source and performant** — a multi-agent harness that works with the
-subscriptions you already pay for, on their hourly limits. It turns the terminal coding CLI
-you already run into a clone of you, one that keeps working while you're away and
-coordinates a whole office of agents on your own machine.
-
-Wraps [Claude Code](https://claude.com/claude-code), Antigravity (Gemini), OpenAI Codex,
-**xAI Grok**, **Kimi Code**, **Gemini CLI**, **Qwen**, **OpenCode**, **Crush**,
-**pi.dev**, **GitHub Copilot CLI**, and **Cursor** — with bring-your-own keys and local LLMs.
-Agents that message, route, and remember, coordinated by **your clone** (Michael) and
-visualized as avatars at work on a shared office floor.
+**Ported & Adapted for Android/Termux by kuromi04** — Includes SwANGLE CPU software rasterization bypass, mobile screen auto-scaling & clamping, and PRoot X11 compatibility.
 
 <p>
-  <em>Electron · React · TypeScript · Pixi.js · xterm.js · node-pty</em>
+  <em>Electron · React · TypeScript · Pixi.js · xterm.js · node-pty · Termux:X11</em>
 </p>
 
 <p>
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-F4D35E.svg?style=flat-square&labelColor=6E1423"></a>
   <a href="./CHANGELOG.md"><img alt="Version: 0.4.6" src="https://img.shields.io/badge/version-0.4.6-F4D35E.svg?style=flat-square&labelColor=6E1423"></a>
-  <img alt="Status: pre-release" src="https://img.shields.io/badge/status-pre--release-F4F1EA.svg?style=flat-square&labelColor=6E1423">
-  <img alt="Platform: macOS | Windows | Linux" src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-F4F1EA.svg?style=flat-square&labelColor=6E1423">
-  <a href="./CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-F4D35E.svg?style=flat-square&labelColor=6E1423"></a>
-  <a href="https://munderdiffl.in/blog/"><img alt="Blog" src="https://img.shields.io/badge/blog-guides%20%26%20postmortems-F4D35E.svg?style=flat-square&labelColor=6E1423"></a>
-  <a href="https://discord.gg/SEDzP5ZPk5"><img alt="Discord" src="https://img.shields.io/badge/Discord-join%20the%20office-F4D35E.svg?style=flat-square&labelColor=6E1423"></a>
+  <img alt="Status: working-on-termux" src="https://img.shields.io/badge/status-Termux%20X11%20Ready-22c55e.svg?style=flat-square">
+  <img alt="Platform: Android | Termux | PRoot | Linux" src="https://img.shields.io/badge/platform-Android%20%7C%20Termux%20%7C%20Linux-F4F1EA.svg?style=flat-square&labelColor=6E1423">
 </p>
-
-<br>
-
-<!-- Inline player renders on github.com (raw URL required; relative paths only link). -->
-<video src="https://github.com/chaitanyagiri/munder-difflin/raw/main/docs/media/hero.mp4" controls muted loop playsinline width="820">
-  <a href="https://github.com/chaitanyagiri/munder-difflin/raw/main/docs/media/hero.mp4">▶ Watch the floor — Munder Difflin running a hive of Claude Code agents</a>
-</video>
 
 </div>
 
